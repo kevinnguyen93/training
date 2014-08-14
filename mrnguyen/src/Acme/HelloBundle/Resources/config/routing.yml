@@ -1,0 +1,4 @@
+acme_hello_homepage:
+    path:     /hello/{name}/{nickname}
+    defaults: { _controller: AcmeHelloBundle:Default:index, age:young he he, _format:html }
+# _format is type : text, html, json

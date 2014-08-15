@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Demo Flat UI {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+    <!-- Loading Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('flatui/bootstrap/css/bootstrap.css') }}" />
+    <link rel="stylesheet" href="{{ asset('flatui/bootstrap/css/prettify.css') }}" />
+
+    <!-- Loading Flat UI -->
+    <link rel="stylesheet" href="{{ asset('flatui/css/flat-ui.css') }}" />
+    <link rel="stylesheet" href="{{ asset('flatui/css/demo.css') }}" />
+
+    {% block stylesheep %}{% endblock %}
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('flatui/js/html5shiv.js') }}"></script>
+    <script src="{{ asset('flatui/js/respond.min.js') }}"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="container">
+        {% block container %}{% endblock %}
+    </div>
+    {% block javascript %}{% endblock %}
+</body>
+</html>

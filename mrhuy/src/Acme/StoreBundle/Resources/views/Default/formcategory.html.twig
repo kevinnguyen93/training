@@ -2,24 +2,24 @@
 
 {% block title %}
     {% if action=='add' %}
-        Add Product
+        Add Category
     {% else %}
-        Edit Product
+        Edit Category
     {% endif %}
 {% endblock %}
 
 {% block menusub %}
     {{ parent() }}
     <ul>
-        <li><a href="{{ url('acme_store_listProduct') }}">List</a></li>
+        <li><a href="{{ url('acme_store_listCategory') }}">List</a></li>
     </ul>
 {% endblock %}
 
 {% block body %}
     {% if action == 'add' %}
-        <h2>Add Product</h2>
+        <h2>Add Category</h2>
     {% else %}
-        <h2>Edit Product</h2>
+        <h2>Edit Category</h2>
     {% endif %}
     <hr/>
     {{ form(formCategory) }}

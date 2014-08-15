@@ -2,6 +2,7 @@
 
 namespace Acme\StoreBundle\Controller;
 
+use Acme\StoreBundle\Form\CategoryType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -77,7 +78,7 @@ class DefaultController extends Controller
             }
         }
 
-        return array('formProduct'=> $formProduct->createView());
+        return array('formProduct'=> $formProduct->createView(), 'aciton' => 'add');
     }
 
     /**
@@ -107,7 +108,140 @@ class DefaultController extends Controller
             }
         }
 
-        return array('formProduct'=> $formProduct->createView());
+        return array('formProduct'=> $formProduct->createView() , 'action' => 'edit');
+    }
+
+    /**
+     * @Route(
+     *  "/deleteProduct/{id}",
+     *  name="acme_store_deleteProduct"
+     * )
+     * @Template()
+     */
+    public function deleteProductAction($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $product = $this->getDoctrine()
+            ->getRepository('AcmeStoreBundle:Product')
+            ->find($id);
+        if(!$product){
+            throw $this->createNotFoundException('No product found for id: ' . $id);
+        }
+        $em->remove($product);
+        $em->flush();
+        return $this->redirect($this->generateUrl('acme_store_listProduct'));
+    }
+
+    /**
+     * @Route(
+     *  "/showProduct/{id}",
+     *  name="acme_store_showProduct"
+     * )
+     * @Template("AcmeStoreBundle:Default:showproduct.html.twig")
+     */
+    public function showProductAction($id)
+    {
+        $product = $this->getDoctrine()
+            ->getRepository('AcmeStoreBundle:Product')
+            ->find($id);
+        if(!$product){
+            throw $this->createNotFoundException('No product found for id: ' . $id);
+        }
+        return array('product'=>$product);
+    }
+
+    /**
+     * @Route(
+     *  "/showCategory/{id}",
+     *  name="acme_store_showCategory"
+     * )
+     * @Template("AcmeStoreBundle:Default:showcategory.html.twig")
+     */
+    public function showCategoryAction($id)
+    {
+        $category = $this->getDoctrine()
+            ->getRepository('AcmeStoreBundle:Category')
+            ->find($id);
+        if(!$category){
+            throw $this->createNotFoundException('No category found for id: ' . $id);
+        }
+        return array('category'=>$category);
+    }
+
+    /**
+     * @Route(
+     *  "/editCategory/{id}",
+     *  name="acme_store_editCategory"
+     * )
+     * @Template("AcmeStoreBundle:Default:formcategory.html.twig")
+     */
+    public function editCategoryAction(Request $request, $id)
+    {
+        $category = $this->getDoctrine()
+            ->getRepository('AcmeStoreBundle:Category')
+            ->find($id);
+        if(!$category){
+            throw $this->createNotFoundException('No product found for id: ' . $id);
+        }
+        $formCategory = $this->createForm(new CategoryType(), $category);
+
+        if($request->getMethod() == 'POST'){
+            $formCategory->bind($request);
+            if($formCategory->isValid()){
+                $em = $this->getDoctrine()->getEntityManager();
+                $em->persist($category);
+                $em->flush();
+                return $this->redirect($this->generateUrl('acme_store_listCategory'));
+            }
+        }
+
+        return array('formCategory'=> $formCategory->createView() , 'action' => 'edit');
+    }
+
+    /**
+     * @Route(
+     *  "/createCategory",
+     *  name="acme_store_createCategory"
+     * )
+     * @Template("AcmeStoreBundle:Default:formcategory.html.twig")
+     */
+    public function createCategoryAction(Request $request)
+    {
+        $category = new Category();
+        $formCategory = $this->createForm(new CategoryType(), $category);
+
+        if($request->getMethod() == 'POST'){
+            $formCategory->bind($request);
+            if($formCategory->isValid()){
+                $em = $this->getDoctrine()->getEntityManager();
+                $em->persist($category);
+                $em->flush();
+                return $this->redirect($this->generateUrl('acme_store_listCategory'));
+            }
+        }
+
+        return array('formCategory'=> $formCategory->createView() , 'action' => 'add');
+    }
+
+    /**
+     * @Route(
+     *  "/deleteCategory/{id}",
+     *  name="acme_store_deleteCategory"
+     * )
+     * @Template()
+     */
+    public function deleteCategoryAction($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $category = $this->getDoctrine()
+            ->getRepository('AcmeStoreBundle:Category')
+            ->find($id);
+        if(!$category){
+            throw $this->createNotFoundException('No Category found for id: ' . $id);
+        }
+        $em->remove($category);
+        $em->flush();
+        return $this->redirect($this->generateUrl('acme_store_listCategory'));
     }
 
     /* ------------------------------------- old function --------------------------- */
@@ -136,52 +270,7 @@ class DefaultController extends Controller
 
         return new Response('Created product Id: '. $product->getId() . ' and category id: ' . $category->getId() );
     }
-    /**
-     * @Route(
-     *  "/showProduct/{id}",
-     *  name="acme_store_showProduct"
-     * )
-     * @Template()
-     */
-    public function showProductAction($id)
-    {
-        $product = $this->getDoctrine()
-                    ->getRepository('AcmeStoreBundle:Product')
-                    ->find($id);
-        $category = $product->getCategory();
-        $categoryName = $category->getName();
-        echo get_class($category);
-        if(!$product){
-            throw $this->createNotFoundException('No product found for id: ' . $id);
-        }
 
-        return new Response('Show product Id: '. $product->getId() . '<br/> name product: ' . $product->getName() . '<br> Category Name: ' . $categoryName);
-    }
-    /**
-     * @Route(
-     *  "/showCategory/{id}",
-     *  name="acme_store_showCategory"
-     * )
-     * @Template()
-     */
-    public function showCategoryAction($id)
-    {
-        $category = $this->getDoctrine()
-            ->getRepository('AcmeStoreBundle:Category')
-            ->find($id);
-        $products = $category->getProducts();
-        if(!$category){
-            throw $this->createNotFoundException('No category found for id: ' . $id);
-        }
-
-//        echo '<pre>';
-//        print_r($category);
-//        foreach($products as $product){
-//            print_r($product->getId());
-//        }
-//        exit();
-//        return new Response('Show $category Id: '. $category->getId() . '<br/> name $category: ' . $category->getName() . '<br> Category Name: ' . $categoryName);
-    }
     /**
      * @Route(
      *  "/update/{id}",

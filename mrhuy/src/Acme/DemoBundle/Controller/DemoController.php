@@ -32,7 +32,7 @@ class DemoController extends Controller
     }
 
     /**
-     * @Route("/contact", name="_demo_contact")
+     * @Route("/contact", name="Default")
      * @Template()
      */
     public function contactAction(Request $request)

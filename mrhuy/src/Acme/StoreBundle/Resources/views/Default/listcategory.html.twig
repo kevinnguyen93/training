@@ -1,0 +1,26 @@
+{% extends '::baseNew.html.twig' %}
+
+{% block title %}
+    List Categories
+{% endblock %}
+{% block body %}
+    <h2>List Category</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Id Category</th>
+            <th>Name Category</th>
+            <th>Number Products</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for category in listCategories %}
+            <tr>
+                <td><a href="{{ url('acme_store_showCategory' , {'id': category.id }) }}" >{{ category.id }}</a></td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.products|length }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

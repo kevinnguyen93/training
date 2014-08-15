@@ -1,0 +1,18 @@
+{% extends '::baseNew.html.twig' %}
+
+{% block title %}
+    Add Products
+{% endblock %}
+
+{% block menusub %}
+    {{ parent() }}
+    <ul>
+        <li><a href="{{ url('acme_store_listProduct') }}">List</a></li>
+    </ul>
+{% endblock %}
+
+{% block body %}
+    <h2>Add Product</h2>
+    <hr/>
+    {{ form(formProduct) }}
+{% endblock %}

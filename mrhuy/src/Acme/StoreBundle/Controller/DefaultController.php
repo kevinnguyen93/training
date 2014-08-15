@@ -33,7 +33,7 @@ class DefaultController extends Controller
      *  "/listProduct",
      *  name="acme_store_listProduct"
      * )
-     * @Template("AcmeStoreBundle:Default:listproduct.html.twig")
+     * @Template("AcmeStoreBundle:Product:listproduct.html.twig")
      */
     public function listProductAction(Request $request)
     {
@@ -47,7 +47,7 @@ class DefaultController extends Controller
      *  "/listCategory",
      *  name="acme_store_listCategory"
      * )
-     * @Template("AcmeStoreBundle:Default:listcategory.html.twig")
+     * @Template("AcmeStoreBundle:Category:listcategory.html.twig")
      */
     public function listCategoryAction(Request $request)
     {
@@ -61,7 +61,7 @@ class DefaultController extends Controller
      *  "/createProduct",
      *  name="acme_store_createProduct"
      * )
-     * @Template("AcmeStoreBundle:Default:createproduct.html.twig")
+     * @Template("AcmeStoreBundle:Product:formproduct.html.twig")
      */
     public function createProductAction(Request $request)
     {
@@ -84,9 +84,9 @@ class DefaultController extends Controller
     /**
      * @Route(
      *  "/editProduct/{id}",
-     *  name="acme_store_eidtProduct"
+     *  name="acme_store_editProduct"
      * )
-     * @Template("AcmeStoreBundle:Default:createproduct.html.twig")
+     * @Template("AcmeStoreBundle:Product:formproduct.html.twig")
      */
     public function editProductAction(Request $request, $id)
     {
@@ -137,7 +137,7 @@ class DefaultController extends Controller
      *  "/showProduct/{id}",
      *  name="acme_store_showProduct"
      * )
-     * @Template("AcmeStoreBundle:Default:showproduct.html.twig")
+     * @Template("AcmeStoreBundle:Product:showproduct.html.twig")
      */
     public function showProductAction($id)
     {
@@ -155,7 +155,7 @@ class DefaultController extends Controller
      *  "/showCategory/{id}",
      *  name="acme_store_showCategory"
      * )
-     * @Template("AcmeStoreBundle:Default:showcategory.html.twig")
+     * @Template("AcmeStoreBundle:Category:showcategory.html.twig")
      */
     public function showCategoryAction($id)
     {
@@ -173,7 +173,7 @@ class DefaultController extends Controller
      *  "/editCategory/{id}",
      *  name="acme_store_editCategory"
      * )
-     * @Template("AcmeStoreBundle:Default:formcategory.html.twig")
+     * @Template("AcmeStoreBundle:Category:formcategory.html.twig")
      */
     public function editCategoryAction(Request $request, $id)
     {
@@ -203,7 +203,7 @@ class DefaultController extends Controller
      *  "/createCategory",
      *  name="acme_store_createCategory"
      * )
-     * @Template("AcmeStoreBundle:Default:formcategory.html.twig")
+     * @Template("AcmeStoreBundle:Category:formcategory.html.twig")
      */
     public function createCategoryAction(Request $request)
     {
@@ -231,8 +231,7 @@ class DefaultController extends Controller
      * @Template()
      */
     public function deleteCategoryAction($id)
-    {
-        $em = $this->getDoctrine()->getEntityManager();
+    {        $em = $this->getDoctrine()->getEntityManager();
         $category = $this->getDoctrine()
             ->getRepository('AcmeStoreBundle:Category')
             ->find($id);

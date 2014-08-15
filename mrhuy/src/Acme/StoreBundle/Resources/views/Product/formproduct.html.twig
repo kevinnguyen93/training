@@ -1,4 +1,4 @@
-{% extends '::baseNew.html.twig' %}
+{% extends '@AcmeStore/layout.html.twig' %}
 
 {% block title %}
     {% if action=='add' %}
@@ -7,6 +7,7 @@
         Edit Product
     {% endif %}
 {% endblock %}
+
 
 {% block menusub %}
     {{ parent() }}
@@ -22,5 +23,5 @@
         <h2>Edit Product</h2>
     {% endif %}
     <hr/>
-    {{ form(formCategory) }}
+    {{ form(formProduct) }}
 {% endblock %}

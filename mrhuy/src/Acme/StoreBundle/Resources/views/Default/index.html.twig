@@ -1,8 +1,12 @@
-{% extends '::baseNew.html.twig' %}
+{% extends '@AcmeStore/layout.html.twig' %}
 
 {% block title %}
     {{ title }}
 {% endblock %}
+
+{% block menusub %}
+{% endblock %}
+
 {% block body %}
     <h2>List Products</h2>
     <hr/>
@@ -26,8 +30,8 @@
             <tbody>
             {% for product in listProducts %}
                 <tr>
-                    <td><a href="{{ url('acme_store_showProduct' , {'id': product.id }) }}" >  {{ product.id }} </a></td>
-                    <td>{{ product.name }}</td>
+                    <td><a href="{{ url('acme_store_editProduct' , {'id': product.id }) }}" >  {{ product.id }} </a></td>
+                    <td><a href="{{ url('acme_store_showProduct' , {'id': product.id }) }}" > {{ product.name }}</a></td>
                     <td><a href="{{ url('acme_store_showCategory' , {'id': product.category.id }) }}" >{{ product.category.name }}</a></td>
                     <td>{{ product.price }}</td>
                     <td>{{ product.description|slice(0,10) }}...</td>

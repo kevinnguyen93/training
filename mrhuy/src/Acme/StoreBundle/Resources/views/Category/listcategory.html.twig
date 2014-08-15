@@ -1,8 +1,17 @@
-{% extends '::baseNew.html.twig' %}
+{% extends '@AcmeStore/layout.html.twig' %}
 
 {% block title %}
     List Categories
 {% endblock %}
+
+{% block menusub %}
+    {{ parent() }}
+    <ul>
+        <li><a href="{{ url('acme_store_listCategory') }}">List</a></li>
+        <li><a href="{{ url('acme_store_createCategory') }}">Add</a></li>
+    </ul>
+{% endblock %}
+
 {% block body %}
     <h2>List Category</h2>
     <table>

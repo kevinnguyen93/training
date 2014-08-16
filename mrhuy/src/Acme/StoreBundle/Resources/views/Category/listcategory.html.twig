@@ -4,34 +4,28 @@
     List Categories
 {% endblock %}
 
-{% block menusub %}
-    {{ parent() }}
-    <ul>
-        <li><a href="{{ url('acme_store_listCategory') }}">List</a></li>
-        <li><a href="{{ url('acme_store_createCategory') }}">Add</a></li>
-    </ul>
-{% endblock %}
-
 {% block body %}
     <h2>List Category</h2>
-    <table>
-        <thead>
-        <tr>
-            <th>Id Category</th>
-            <th>Name Category</th>
-            <th>Number Products</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for category in listCategories %}
+    <div class="panel panel-default">
+        <table class="table">
+            <thead>
             <tr>
-                <td><a href="{{ url('acme_store_editCategory' , {'id': category.id }) }}" >{{ category.id }}</a></td>
-                <td><a href="{{ url('acme_store_showCategory' , {'id': category.id }) }}" >{{ category.name }}</a></td>
-                <td>{{ category.products|length }}</td>
-                <td><a href="{{ url('acme_store_deleteProduct' , {'id': category.id }) }}" >Delete</a></td>
+                <th>ID</th>
+                <th>Name Category</th>
+                <th>Number Products</th>
+                <th></th>
             </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for category in listCategories %}
+                <tr>
+                    <td><a href="{{ url('acme_store_editCategory' , {'id': category.id }) }}" >{{ category.id }}</a></td>
+                    <td><a href="{{ url('acme_store_showCategory' , {'id': category.id }) }}" >{{ category.name }}</a></td>
+                    <td>{{ category.products|length }}</td>
+                    <td><a href="{{ url('acme_store_deleteProduct' , {'id': category.id }) }}" >Delete</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

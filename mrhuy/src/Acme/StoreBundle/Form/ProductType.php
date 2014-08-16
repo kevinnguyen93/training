@@ -18,8 +18,7 @@ class ProductType extends AbstractType
             ->add('category')
             ->add('name' , 'text')
             ->add('price' , 'number')
-            ->add('description','textarea')
-            ->add('save', 'submit', array('label' => 'Create Product'));
+            ->add('description','textarea');
     }
 
     public function getName()

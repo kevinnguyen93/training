@@ -4,31 +4,24 @@
     Show Category
 {% endblock %}
 
-
-{% block menusub %}
-    {{ parent() }}
-    <ul>
-        <li><a href="{{ url('acme_store_listCategory') }}">List</a></li>
-        <li><a href="{{ url('acme_store_createCategory') }}">Add</a></li>
-    </ul>
-{% endblock %}
-
 {% block body %}
     <h2>Show Category</h2>
-    <table>
-        <thead>
-        <tr>
-            <th>Id Category</th>
-            <th>Name Category</th>
-            <th>Number Products</th>
-        </tr>
-        </thead>
-        <tbody>
+    <div class="panel panel-default">
+        <table class="table">
+            <thead>
             <tr>
-                <td><a href="{{ url('acme_store_editCategory' , {'id': category.id }) }}" >{{ category.id }}</a></td>
-                <td>{{ category.name }}</td>
-                <td>{{ category.products|length }}</td>
+                <th>ID</th>
+                <th>Name Category</th>
+                <th>Number Products</th>
             </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="{{ url('acme_store_editCategory' , {'id': category.id }) }}" >{{ category.id }}</a></td>
+                    <td>{{ category.name }}</td>
+                    <td>{{ category.products|length }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

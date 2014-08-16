@@ -3,6 +3,7 @@
 namespace Acme\StoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Asset;
 
 /**
  * Product
@@ -29,6 +30,7 @@ class Product
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Asset\NotBlank()
      */
     private $name;
 
@@ -36,6 +38,8 @@ class Product
      * @var float
      *
      * @ORM\Column(name="price", type="float")
+     * @Asset\NotBlank()
+     * @Asset\Type("float")
      */
     private $price;
 

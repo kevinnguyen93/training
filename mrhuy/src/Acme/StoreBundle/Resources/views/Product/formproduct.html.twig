@@ -8,14 +8,6 @@
     {% endif %}
 {% endblock %}
 
-
-{% block menusub %}
-    {{ parent() }}
-    <ul>
-        <li><a href="{{ url('acme_store_listProduct') }}">List</a></li>
-    </ul>
-{% endblock %}
-
 {% block body %}
     {% if action == 'add' %}
         <h2>Add Product</h2>
@@ -23,5 +15,75 @@
         <h2>Edit Product</h2>
     {% endif %}
     <hr/>
+    {#
+        <form action="" method="post" {{ form_enctype(formProduct) }}>
+            {{ form_widget(formProduct) }}
+
+            <input type="submit" value="{% if action=='add' %}Add Product{% else %}Edit Product{% endif %}" />
+        </form>
+    #}
+    <div class="formcontent">
+        {{ form_start(formProduct) }}
+
+        <div class="error has-error row demo-row">
+            {{ form_errors(formProduct) }}
+        </div>
+
+        <div class="row demo-row">
+            <div class="form-group">
+                <div class="col-xs-3">
+                    {{ form_label(formProduct.category , 'Category Group: ', { 'attr': {'class': 'control-label'}} ) }}
+                </div>
+                <div class="col-xs-3">
+                    {{ form_widget(formProduct.category , {'attr': {'class': 'select-block selectpicker'}} ) }}
+                </div>
+                {{ form_errors(formProduct.category) }}
+            </div>
+        </div>
+        <div class="row demo-row">
+            <div class="form-group">
+                <div class="col-xs-3">
+                    {{ form_label(formProduct.name) }}
+                </div>
+                <div class="col-xs-3">
+                    {{ form_widget(formProduct.name , {'attr': {'class': 'form-control'}} ) }}
+                </div>
+                {{ form_errors(formProduct.name) }}
+            </div>
+        </div>
+        <div class="row demo-row">
+            <div class="form-group">
+                <div class="col-xs-3">
+                    {{ form_label(formProduct.price) }}
+                </div>
+                <div class="col-xs-3">
+                    {{ form_widget(formProduct.price , {'attr': {'class': 'form-control'}} ) }}
+                </div>
+                {{ form_errors(formProduct.price) }}
+            </div>
+        </div>
+        <div class="row demo-row">
+            <div class="form-group">
+                <div class="col-xs-3">
+                    {{ form_label(formProduct.description) }}
+                </div>
+                <div class="col-xs-6">
+                    {{ form_widget(formProduct.description , {'attr': {'class': 'form-control' , 'rows': '5'}} ) }}
+                </div>
+                {{ form_errors(formProduct.description) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="row_submit col-xs-3">
+                <input class="btn btn-block btn-lg btn-primary" type="submit" value="{% if action=='add' %}Add Product{% else %}Edit Product{% endif %}" />
+            </div>
+        </div>
+        {{ form_end(formProduct) }}
+    </div>
+
+    <hr/>
+
+    {#
     {{ form(formProduct) }}
+    #}
 {% endblock %}

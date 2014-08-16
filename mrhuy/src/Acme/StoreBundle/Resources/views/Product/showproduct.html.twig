@@ -4,35 +4,29 @@
     Show Products
 {% endblock %}
 
-{% block menusub %}
-    {{ parent() }}
-    <ul>
-        <li><a href="{{ url('acme_store_listProduct') }}">List</a></li>
-        <li><a href="{{ url('acme_store_createProduct') }}">Add</a></li>
-    </ul>
-{% endblock %}
-
 {% block body %}
     <h2>Show Products</h2>
     <hr/>
-    <table>
-        <thead>
-        <tr>
-            <th>Id Product</th>
-            <th>Name Product</th>
-            <th>Name Category</th>
-            <th>Price</th>
-            <th>Description</th>
-        </tr>
-        </thead>
-        <tbody>
+    <div class="panel panel-default">
+        <table class="table">
+            <thead>
             <tr>
-                <td><a href="{{ url('acme_store_editProduct' , {'id': product.id }) }}" > {{ product.id }} </a></td>
-                <td>{{ product.name }}</td>
-                <td><a href="{{ url('acme_store_showCategory' , {'id': product.category.id }) }}" >{{ product.category.name }}</a></td>
-                <td>{{ product.price }}</td>
-                <td>{{ product.description }}</td>
+                <th>ID</th>
+                <th>Name Product</th>
+                <th>Name Category</th>
+                <th>Price</th>
+                <th>Description</th>
             </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="{{ url('acme_store_editProduct' , {'id': product.id }) }}" > {{ product.id }} </a></td>
+                    <td>{{ product.name }}</td>
+                    <td><a href="{{ url('acme_store_showCategory' , {'id': product.category.id }) }}" >{{ product.category.name }}</a></td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.description }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

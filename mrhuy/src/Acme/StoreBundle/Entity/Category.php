@@ -112,4 +112,42 @@ class Category
     {
         return $this->products;
     }
+
+    /**
+     * @ORM\ManyToMany(targetEntity="SubCategory", mappedBy="subCategory")
+     */
+    protected $childcategory;
+
+    /**
+     * Add childcategory
+     *
+     * @param \Acme\StoreBundle\Entity\SubCategory $childcategory
+     * @return Category
+     */
+    public function addChildcategory(\Acme\StoreBundle\Entity\SubCategory $childcategory)
+    {
+        $this->childcategory[] = $childcategory;
+
+        return $this;
+    }
+
+    /**
+     * Remove childcategory
+     *
+     * @param \Acme\StoreBundle\Entity\SubCategory $childcategory
+     */
+    public function removeChildcategory(\Acme\StoreBundle\Entity\SubCategory $childcategory)
+    {
+        $this->childcategory->removeElement($childcategory);
+    }
+
+    /**
+     * Get childcategory
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getChildcategory()
+    {
+        return $this->childcategory;
+    }
 }

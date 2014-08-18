@@ -83,6 +83,7 @@
   'AcmeStoreBundle:Category:listcategory.html.twig' => 'D:\\xampp\\htdocs\\training\\mrhuy\\src\\Acme\\StoreBundle/Resources/views/Category/listcategory.html.twig',
   'AcmeStoreBundle:Category:showcategory.html.twig' => 'D:\\xampp\\htdocs\\training\\mrhuy\\src\\Acme\\StoreBundle/Resources/views/Category/showcategory.html.twig',
   'AcmeStoreBundle:Default:fieldsForm.html.twig' => 'D:\\xampp\\htdocs\\training\\mrhuy\\src\\Acme\\StoreBundle/Resources/views/Default/fieldsForm.html.twig',
+  'AcmeStoreBundle:Default:home.html.twig' => 'D:\\xampp\\htdocs\\training\\mrhuy\\src\\Acme\\StoreBundle/Resources/views/Default/home.html.twig',
   'AcmeStoreBundle:Default:index.html.twig' => 'D:\\xampp\\htdocs\\training\\mrhuy\\src\\Acme\\StoreBundle/Resources/views/Default/index.html.twig',
   'AcmeStoreBundle::layout.html.twig' => 'D:\\xampp\\htdocs\\training\\mrhuy\\src\\Acme\\StoreBundle/Resources/views/layout.html.twig',
   'AcmeStoreBundle:Product:formproduct.html.twig' => 'D:\\xampp\\htdocs\\training\\mrhuy\\src\\Acme\\StoreBundle/Resources/views/Product/formproduct.html.twig',

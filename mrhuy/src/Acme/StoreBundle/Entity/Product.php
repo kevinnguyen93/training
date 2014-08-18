@@ -182,4 +182,27 @@ class Product
             'description' => 'textarea'
         );
     }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     * @return Product
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime 
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
 }

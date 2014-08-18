@@ -27,6 +27,17 @@ font-size: 14px;
 .padding-0{
     padding: 0;
 }
+.padding-lr30{
+    padding: 0 30px;
+}
+table.border-none td,
+table.border-none th,
+table.border-none{
+    border: none !important;
+}
+.min-height-100{
+    min-height: 100px;
+}
 /* css all Block */
 .block-user-status{
     line-height: 53px;
@@ -57,13 +68,35 @@ font-size: 14px;
 }
 .block_category .block_blockquote{
     float: left;
-    width: 100%; 
+    width: 100%;
 }
+.td_progress small,
+.block_individual small,
+.block_category .block_principle small,
 .block_category .block_blockquote small{
     float: left;
     margin-right: 5px;
 }
+.td_progress small,
+.block_individual small,
+.block_category .block_principle small,
+.block_category .block_blockquote table small{
+    width: 35px;
+}
+.td_progress .progress,
+.block_individual .progress,
+.block_category .block_principle .progress,
 .block_category .block_blockquote .progress{
     margin-bottom: 0;
     margin-top: 9px;
+}
+.block_blockquote{
+    margin-top: 10px;
+}
+.block_blockquote_text{
+    padding-top: 37px;
+    padding-left: 13px;
+}
+.block_principle{
+    text-align: center;
 }

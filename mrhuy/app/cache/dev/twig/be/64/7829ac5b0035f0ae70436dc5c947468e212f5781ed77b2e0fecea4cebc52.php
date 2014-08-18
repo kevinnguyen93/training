@@ -284,8 +284,8 @@ class __TwigTemplate_be647829ac5b0035f0ae70436dc5c947468e212f5781ed77b2e0fecea4c
                 </div>
                 <div class=\"col-xs-12\">
                     <div class=\"block_blockquote bg-darkgray\">
-                        <div class=\"float-left col-xs-6 padding-0\">
-                            <h4>Overall Peer RatingL 68% or 5.6 Avergae</h4>
+                        <div class=\"float-left col-xs-6 padding-0 block_blockquote_text\">
+                            <h5>Overall Peer RatingL 68% or 5.6 Avergae</h5>
                             <small>Aggregate rating for all categories assessed</small>
                         </div>
                         <div class=\"float-right col-xs-6\">
@@ -325,62 +325,304 @@ class __TwigTemplate_be647829ac5b0035f0ae70436dc5c947468e212f5781ed77b2e0fecea4c
                         </div>
                     </div>
                 </div>
+                <div class=\"col-xs-12\">
+                    <div class=\"block_principle\">
+                        <div>
+                            <h5>Principle Behaviour - 20%</h5>
+                            <smal>The short description that was provideded during the setup of assessment goes here.</smal>
+                        </div>
+                        <div class=\"col-xs-3 min-height-100\"></div>
+                        <div class=\"col-xs-6\">
+                            <table class=\"table border-none\">
+                                <tr>
+                                    <td class=\"col-xs-6\"></td>
+                                    <td>%AVG</td>
+                                    <td>AVG</td>
+                                    <td>Mo</td>
+                                    <td>Md</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>Peer</small>
+                                        <div class=\"progress\">
+                                            <div class=\"progress-bar\" style=\"width: 17.01%;\">5.7</div>
+                                        </div>
+                                    </td>
+                                    <td>17.01%</td>
+                                    <td>5.7</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>Self</small>
+                                        <div class=\"progress\">
+                                            <div class=\"progress-bar progress-bar-success\" style=\"width: 15.01%;\">4.9</div>
+                                        </div>
+                                    </td>
+                                    <td>15.01%</td>
+                                    <td>4.9</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr style=\"float: left; width: 100%\">
+            </div>
+        </div><!-- block_category -->
+
+        <div class=\"row block_individual\">
+            <div class=\"col-xs-12 padding-lr30\">
+                <h4>Individual Results from Question Assessed</h4>
+                <div class=\"col-xs-6\">
+                    <div style=\"padding-top: 38px;padding-bottom: 21px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, porro!</div>
+                    <div style=\"padding-top: 60px;padding-bottom: 42px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div style=\"padding-top: 38px;padding-bottom: 21px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem cupiditate dolorem eaque eius eligendi est explicabo fugit id inventore itaque libero neque, non provident qui quod ratione sequi vitae!</div>
+                </div>
+                <div class=\"col-xs-4 float-right\">
+
+                    <table class=\"table border-none font-size-14\">
+                        <tr>
+                            <td class=\"col-xs-6\"></td>
+                            <td>%AVG</td>
+                            <td>AVG</td>
+                            <td>Mo</td>
+                            <td>Md</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <small>Peer</small>
+                                <div class=\"progress\">
+                                    <div class=\"progress-bar\" style=\"width: 68.01%;\">5.6</div>
+                                </div>
+                            </td>
+                            <td>68.01%</td>
+                            <td>5.6</td>
+                            <td>6</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <small>Self</small>
+                                <div class=\"progress\">
+                                    <div class=\"progress-bar progress-bar-success\" style=\"width: 59.01%;\">5.2</div>
+                                </div>
+                            </td>
+                            <td>59.01%</td>
+                            <td>5.2</td>
+                            <td>5</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                    <table class=\"table border-none font-size-14\">
+                        <tr>
+                            <td class=\"col-xs-6\"></td>
+                            <td>%AVG</td>
+                            <td>AVG</td>
+                            <td>Mo</td>
+                            <td>Md</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <small>Peer</small>
+                                <div class=\"progress\">
+                                    <div class=\"progress-bar\" style=\"width: 68.01%;\">5.6</div>
+                                </div>
+                            </td>
+                            <td>68.01%</td>
+                            <td>5.6</td>
+                            <td>6</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <small>Self</small>
+                                <div class=\"progress\">
+                                    <div class=\"progress-bar progress-bar-success\" style=\"width: 59.01%;\">5.2</div>
+                                </div>
+                            </td>
+                            <td>59.01%</td>
+                            <td>5.2</td>
+                            <td>5</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                    <table class=\"table border-none font-size-14\">
+                        <tr>
+                            <td class=\"col-xs-6\"></td>
+                            <td>%AVG</td>
+                            <td>AVG</td>
+                            <td>Mo</td>
+                            <td>Md</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <small>Peer</small>
+                                <div class=\"progress\">
+                                    <div class=\"progress-bar\" style=\"width: 68.01%;\">5.6</div>
+                                </div>
+                            </td>
+                            <td>68.01%</td>
+                            <td>5.6</td>
+                            <td>6</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <small>Self</small>
+                                <div class=\"progress\">
+                                    <div class=\"progress-bar progress-bar-success\" style=\"width: 59.01%;\">5.2</div>
+                                </div>
+                            </td>
+                            <td>59.01%</td>
+                            <td>5.2</td>
+                            <td>5</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr style=\"float: left; width: 100%\">
+            </div>
+        </div><!-- block_individual -->
+
+        <div class=\"row block_job\">
+            <div class=\"col-xs-12\">
+                <div class=\"block_principle\">
+                    <div>
+                        <h5>Job Skills - 20%</h5>
+                        <smal>The short description that was provideded during the setup of assessment goes here.</smal>
+                    </div>
+                    <div class=\"col-xs-3 min-height-100\"></div>
+                    <div class=\"col-xs-6\">
+                        <table class=\"table border-none\">
+                            <tr>
+                                <td class=\"col-xs-6\"></td>
+                                <td>%AVG</td>
+                                <td>AVG</td>
+                                <td>Mo</td>
+                                <td>Md</td>
+                            </tr>
+                            <tr>
+                                <td class=\"td_progress\">
+                                    <small>Peer</small>
+                                    <div class=\"progress\">
+                                        <div class=\"progress-bar\" style=\"width: 17.01%;\">5.7</div>
+                                    </div>
+                                </td>
+                                <td>17.01%</td>
+                                <td>5.7</td>
+                                <td>6</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class=\"td_progress\">
+                                    <small>Self</small>
+                                    <div class=\"progress\">
+                                        <div class=\"progress-bar progress-bar-success\" style=\"width: 15.01%;\">4.9</div>
+                                    </div>
+                                </td>
+                                <td>15.01%</td>
+                                <td>4.9</td>
+                                <td>5</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <hr style=\"float: left; width: 100%\">
+            </div>
+        </div><!-- block_job -->
+
+        <div class=\"row\">
+            <div class=\"col-xs-12 padding-lr30\">
+                <h4>Individual Results from Question Assessed</h4>
+                <div class=\"col-xs-6\">
+                    <div style=\"padding-top: 38px;padding-bottom: 21px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, porro!</div>
+                </div>
+                <div class=\"col-xs-4 float-right\">
+
+                    <table class=\"table border-none font-size-14\">
+                        <tr>
+                            <td class=\"col-xs-6\"></td>
+                            <td>%AVG</td>
+                            <td>AVG</td>
+                            <td>Mo</td>
+                            <td>Md</td>
+                        </tr>
+                        <tr>
+                            <td class=\"td_progress\">
+                                <small>Peer</small>
+                                <div class=\"progress\">
+                                    <div class=\"progress-bar\" style=\"width: 68.01%;\">5.6</div>
+                                </div>
+                            </td>
+                            <td>68.01%</td>
+                            <td>5.6</td>
+                            <td>6</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr style=\"float: left; width: 100%\">
             </div>
         </div>
+
 
     </div>
 
     <!-- load Js -->
     <script src=\"";
-        // line 295
+        // line 537
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery-1.8.3.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 296
+        // line 538
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery-ui-1.10.3.custom.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 297
+        // line 539
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.ui.touch-punch.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 298
+        // line 540
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 299
+        // line 541
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap-select.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 300
+        // line 542
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap-switch.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 301
+        // line 543
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/flatui-checkbox.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 302
+        // line 544
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/flatui-radio.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 303
+        // line 545
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.tagsinput.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 304
+        // line 546
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.placeholder.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 305
+        // line 547
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.stacktable.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 306
+        // line 548
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/video.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 307
+        // line 549
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/application.js"), "html", null, true);
         echo "\"></script>
 
@@ -400,6 +642,6 @@ class __TwigTemplate_be647829ac5b0035f0ae70436dc5c947468e212f5781ed77b2e0fecea4c
 
     public function getDebugInfo()
     {
-        return array (  384 => 307,  380 => 306,  376 => 305,  372 => 304,  368 => 303,  364 => 302,  360 => 301,  356 => 300,  352 => 299,  348 => 298,  344 => 297,  340 => 296,  336 => 295,  60 => 22,  56 => 21,  49 => 17,  44 => 15,  38 => 12,  34 => 11,  29 => 9,  19 => 1,);
+        return array (  626 => 549,  622 => 548,  618 => 547,  614 => 546,  610 => 545,  606 => 544,  602 => 543,  598 => 542,  594 => 541,  590 => 540,  586 => 539,  582 => 538,  578 => 537,  60 => 22,  56 => 21,  49 => 17,  44 => 15,  38 => 12,  34 => 11,  29 => 9,  19 => 1,);
     }
 }

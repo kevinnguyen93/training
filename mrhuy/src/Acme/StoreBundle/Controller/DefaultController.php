@@ -2,15 +2,19 @@
 
 namespace Acme\StoreBundle\Controller;
 
-use Acme\StoreBundle\Form\CategoryType;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
 use Acme\StoreBundle\Entity\Product;
 use Acme\StoreBundle\Entity\Category;
 use Acme\StoreBundle\Form\ProductType;
+use Acme\StoreBundle\Form\CategoryType;
+use Acme\StoreBundle\Form\RegistrationType;
+use Acme\StoreBundle\Form\Registration;
 
 class DefaultController extends Controller
 {
@@ -28,6 +32,22 @@ class DefaultController extends Controller
             ->findAll();
         return array('title'=>'Home Store' , 'listProducts'=>$listProducts);
     }
+    /* -----------------------     Account       ------------------------------------*/
+    /**
+     * @Route(
+     *  "/register",
+     *  name="acme_store_register"
+     * )
+     * @Template("AcmeStoreBundle:Account:register.html.twig")
+     */
+    public function registerAction(Request $request)
+    {
+        $form = $this->createForm(new RegistrationType(), new Registration());
+
+        return array('form' => $form->createView());
+    }
+
+    /* -----------------------     Product      ------------------------------------*/
     /**
      * @Route(
      *  "/listProduct",
@@ -42,20 +62,7 @@ class DefaultController extends Controller
             ->findAll();
         return array('listProducts'=>$listProducts);
     }
-    /**
-     * @Route(
-     *  "/listCategory",
-     *  name="acme_store_listCategory"
-     * )
-     * @Template("AcmeStoreBundle:Category:listcategory.html.twig")
-     */
-    public function listCategoryAction(Request $request)
-    {
-        $listCategories = $this->getDoctrine()
-            ->getRepository('AcmeStoreBundle:Category')
-            ->findAll();
-        return array('listCategories'=>$listCategories);
-    }
+
     /**
      * @Route(
      *  "/createProduct",
@@ -148,6 +155,21 @@ class DefaultController extends Controller
             throw $this->createNotFoundException('No product found for id: ' . $id);
         }
         return array('product'=>$product);
+    }
+    /* -----------------------     Category       ------------------------------------*/
+    /**
+     * @Route(
+     *  "/listCategory",
+     *  name="acme_store_listCategory"
+     * )
+     * @Template("AcmeStoreBundle:Category:listcategory.html.twig")
+     */
+    public function listCategoryAction(Request $request)
+    {
+        $listCategories = $this->getDoctrine()
+            ->getRepository('AcmeStoreBundle:Category')
+            ->findAll();
+        return array('listCategories'=>$listCategories);
     }
 
     /**

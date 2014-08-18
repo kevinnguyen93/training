@@ -1,0 +1,2 @@
+[2014-08-14 12:35:06] request.INFO: Matched route "acme_store_showall" (parameters: "_controller": "Acme\StoreBundle\Controller\DefaultController::showallAction", "_route": "acme_store_showall") [] []
+[2014-08-14 12:35:28] request.INFO: Matched route "acme_store_showall" (parameters: "_controller": "Acme\StoreBundle\Controller\DefaultController::showallAction", "_route": "acme_store_showall") [] []

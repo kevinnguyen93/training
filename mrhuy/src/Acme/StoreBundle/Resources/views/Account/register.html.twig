@@ -1,0 +1,13 @@
+{% extends '@AcmeStore/layout.html.twig' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+    <form action="" method="post" {{ form_enctype(form) }}>
+        {% form_theme form 'AcmeStoreBundle:Default:fieldsForm.html.twig' %}
+        {{ form_widget(form) }}
+        <input type="submit" />
+    </form>
+{% endblock %}

@@ -173,4 +173,13 @@ class Product
     {
         $this->created = new \DateTime();
     }
+
+    public function listFields(){
+        return array(
+            'category' => 'category',
+            'name' => 'text',
+            'price' => 'number',
+            'description' => 'textarea'
+        );
+    }
 }

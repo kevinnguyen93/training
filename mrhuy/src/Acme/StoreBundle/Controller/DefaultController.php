@@ -16,6 +16,9 @@ use Acme\StoreBundle\Form\CategoryType;
 use Acme\StoreBundle\Form\RegistrationType;
 use Acme\StoreBundle\Form\Registration;
 
+// use form all for store
+use Acme\StoreBundle\Form\StoreForm;
+
 class DefaultController extends Controller
 {
     /**
@@ -23,7 +26,7 @@ class DefaultController extends Controller
      *  "/",
      *  name="acme_store_index"
      * )
-     * @Template("AcmeStoreBundle:Default:home.html.twig")
+     * @Template("AcmeStoreBundle:Default:index.html.twig")
      */
     public function indexAction(Request $request)
     {
@@ -31,6 +34,17 @@ class DefaultController extends Controller
             ->getRepository('AcmeStoreBundle:Product')
             ->findAll();
         return array('title'=>'Home Store' , 'listProducts'=>$listProducts);
+    }
+    /**
+     * @Route(
+     *  "/report",
+     *  name="acme_store_report"
+     * )
+     * @Template("AcmeStoreBundle:Default:home.html.twig")
+     */
+    public function homeAction(Request $request)
+    {
+        return array('title'=>'Home Store');
     }
     /* -----------------------     Account       ------------------------------------*/
     /**
@@ -73,7 +87,8 @@ class DefaultController extends Controller
     public function createProductAction(Request $request)
     {
         $product = new Product();
-        $formProduct = $this->createForm(new ProductType(), $product);
+        $formProduct = $this->createForm(new StoreForm($product), $product);
+//        $formProduct = $this->createForm(new ProductType(), $product);
 
         if($request->getMethod() == 'POST'){
             $formProduct->bind($request);
@@ -85,7 +100,7 @@ class DefaultController extends Controller
             }
         }
 
-        return array('formProduct'=> $formProduct->createView(), 'aciton' => 'add');
+        return array('formProduct'=> $formProduct->createView(), 'action' => 'add');
     }
 
     /**
@@ -103,7 +118,8 @@ class DefaultController extends Controller
         if(!$product){
             throw $this->createNotFoundException('No product found for id: ' . $id);
         }
-        $formProduct = $this->createForm(new ProductType(), $product);
+        $formProduct = $this->createForm(new StoreForm($product), $product);
+//        $formProduct = $this->createForm(new ProductType(), $product);
 
         if($request->getMethod() == 'POST'){
             $formProduct->bind($request);

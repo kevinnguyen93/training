@@ -20,7 +20,7 @@ class CategoryType extends AbstractType
 
     public function getName()
     {
-        return 'category';
+        return 'categorys';
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

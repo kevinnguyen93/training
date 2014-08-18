@@ -145,9 +145,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Acme\\StoreBundle\\Controller\\DefaultController::indexAction',  '_route' => 'acme_store_index',);
             }
 
-            // acme_store_register
-            if ($pathinfo === '/store/register') {
-                return array (  '_controller' => 'Acme\\StoreBundle\\Controller\\DefaultController::registerAction',  '_route' => 'acme_store_register',);
+            if (0 === strpos($pathinfo, '/store/re')) {
+                // acme_store_report
+                if ($pathinfo === '/store/report') {
+                    return array (  '_controller' => 'Acme\\StoreBundle\\Controller\\DefaultController::homeAction',  '_route' => 'acme_store_report',);
+                }
+
+                // acme_store_register
+                if ($pathinfo === '/store/register') {
+                    return array (  '_controller' => 'Acme\\StoreBundle\\Controller\\DefaultController::registerAction',  '_route' => 'acme_store_register',);
+                }
+
             }
 
             // acme_store_listProduct

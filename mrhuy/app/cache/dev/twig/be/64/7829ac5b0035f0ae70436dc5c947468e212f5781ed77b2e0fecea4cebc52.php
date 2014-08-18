@@ -276,6 +276,83 @@ class __TwigTemplate_be647829ac5b0035f0ae70436dc5c947468e212f5781ed77b2e0fecea4c
             </div>
         </div> <!-- block_table2 -->
 
+        <div class=\"row block_listrates\">
+            <div class=\"col-xs-12\">
+                <h4>List Of Raters</h4>
+                <div class=\"col-xs-9\">
+                    <table class=\"table table-striped\">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Employee Name</th>
+                                <th>Status</th>
+                                <th>%AVG</th>
+                                <th>AVG</th>
+                                <th>Media</th>
+                                <th>Mode</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><a href=\"\">Kenneth Yap</a></td>
+                                <td>Pading</td>
+                                <td>68.00%</td>
+                                <td>5.7</td>
+                                <td>5.5</td>
+                                <td>6.7</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href=\"\">Vincent Hung</a></td>
+                                <td>Completed</td>
+                                <td>98.79%</td>
+                                <td>5.5</td>
+                                <td>5.5</td>
+                                <td>6.7</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href=\"\">Weng Cheng</a></td>
+                                <td>Completed</td>
+                                <td>78.91%</td>
+                                <td>5.3</td>
+                                <td>5.5</td>
+                                <td>6.7</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href=\"\">Lauren Yang</a></td>
+                                <td>Completed</td>
+                                <td>57.15%</td>
+                                <td>5.1</td>
+                                <td>5.5</td>
+                                <td>6.7</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href=\"\">Luis Loo</a></td>
+                                <td>Pending</td>
+                                <td>45.91%</td>
+                                <td>5.8</td>
+                                <td>5.5</td>
+                                <td>6.7</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a href=\"\">Linda Wang</a></td>
+                                <td>Pending</td>
+                                <td>54.01%</td>
+                                <td>5.7</td>
+                                <td>5.5</td>
+                                <td>6.7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- block_listrates -->
+
         <div class=\"row block_category\">
             <div class=\"col-xs-12\">
                 <div class=\"col-xs-12\">
@@ -539,7 +616,7 @@ class __TwigTemplate_be647829ac5b0035f0ae70436dc5c947468e212f5781ed77b2e0fecea4c
             <div class=\"col-xs-12 padding-lr30\">
                 <h4>Individual Results from Question Assessed</h4>
                 <div class=\"col-xs-6\">
-                    <div style=\"padding-top: 38px;padding-bottom: 21px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, porro!</div>
+                    <div style=\"padding-top: 20px;padding-bottom: 21px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, porro!</div>
                 </div>
                 <div class=\"col-xs-4 float-right\">
 
@@ -574,55 +651,55 @@ class __TwigTemplate_be647829ac5b0035f0ae70436dc5c947468e212f5781ed77b2e0fecea4c
 
     <!-- load Js -->
     <script src=\"";
-        // line 537
+        // line 614
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery-1.8.3.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 538
+        // line 615
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery-ui-1.10.3.custom.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 539
+        // line 616
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.ui.touch-punch.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 540
+        // line 617
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 541
+        // line 618
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap-select.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 542
+        // line 619
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap-switch.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 543
+        // line 620
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/flatui-checkbox.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 544
+        // line 621
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/flatui-radio.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 545
+        // line 622
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.tagsinput.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 546
+        // line 623
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.placeholder.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 547
+        // line 624
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.stacktable.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 548
+        // line 625
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/video.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 549
+        // line 626
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/application.js"), "html", null, true);
         echo "\"></script>
 
@@ -642,6 +719,6 @@ class __TwigTemplate_be647829ac5b0035f0ae70436dc5c947468e212f5781ed77b2e0fecea4c
 
     public function getDebugInfo()
     {
-        return array (  626 => 549,  622 => 548,  618 => 547,  614 => 546,  610 => 545,  606 => 544,  602 => 543,  598 => 542,  594 => 541,  590 => 540,  586 => 539,  582 => 538,  578 => 537,  60 => 22,  56 => 21,  49 => 17,  44 => 15,  38 => 12,  34 => 11,  29 => 9,  19 => 1,);
+        return array (  703 => 626,  699 => 625,  695 => 624,  691 => 623,  687 => 622,  683 => 621,  679 => 620,  675 => 619,  671 => 618,  667 => 617,  663 => 616,  659 => 615,  655 => 614,  60 => 22,  56 => 21,  49 => 17,  44 => 15,  38 => 12,  34 => 11,  29 => 9,  19 => 1,);
     }
 }

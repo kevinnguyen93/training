@@ -1,0 +1,69 @@
+hr{
+    margin: 10px 0px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.color-white{
+    color: #ffffff ;
+}
+.font-size-14{
+font-size: 14px;
+}
+.table-border-right th,
+.table-border-right td{
+    border-right:1px solid #dddddd ;
+}
+.table-border-right th:last-child,
+.table-border-right td:last-child{
+    border-right: none;
+}
+.bg-darkgray{
+    background: #dddddd;
+}
+.padding-0{
+    padding: 0;
+}
+/* css all Block */
+.block-user-status{
+    line-height: 53px;
+}
+.block-user-status a{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.block_link_overview a{
+    text-decoration: underline;
+    padding-right: 10px;
+}
+.block_link_pds{
+    margin-top: 10px;
+}
+.block_link_pds hr{
+    margin: 5px 0px;
+}
+.block_link_pds a{
+    padding: 0 5px;
+}
+.block_table1{
+    margin-top: 10px;
+}
+.block_table1 th,
+.block_table1{
+    text-align: center;
+}
+.block_category .block_blockquote{
+    float: left;
+    width: 100%; 
+}
+.block_category .block_blockquote small{
+    float: left;
+    margin-right: 5px;
+}
+.block_category .block_blockquote .progress{
+    margin-bottom: 0;
+    margin-top: 9px;
+}

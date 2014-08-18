@@ -1,0 +1,405 @@
+<?php
+
+/* AcmeStoreBundle:Default:home.html.twig */
+class __TwigTemplate_be647829ac5b0035f0ae70436dc5c947468e212f5781ed77b2e0fecea4cebc52 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        // line 1
+        echo "<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <title>Report GUI Flat UI</title>
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+
+    <link rel=\"icon\" sizes=\"16x16\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
+        echo "\" />
+    <!-- Loading Bootstrap -->
+    <link rel=\"stylesheet\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/bootstrap/css/bootstrap.css"), "html", null, true);
+        echo "\" />
+    <link rel=\"stylesheet\" href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/bootstrap/css/prettify.css"), "html", null, true);
+        echo "\" />
+
+    <!-- Loading Flat UI -->
+    <link rel=\"stylesheet\" href=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/css/flat-ui.css"), "html", null, true);
+        echo "\" />
+
+    <link rel=\"stylesheet\" href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("css/report.css"), "html", null, true);
+        echo "\" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/html5shiv.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/respond.min.js"), "html", null, true);
+        echo "\"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class=\"container\">
+        <div class=\"row block_menutop\">
+            <div class=\"col-xs-12\">
+                <div class=\"block_top\">
+                    <nav class=\"navbar navbar-inverse navbar-embossed\" role=\"navigation\">
+                        <div class=\"navbar-header\">
+                            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#navbar-collapse-01\">
+                                <span class=\"sr-only\">Toggle navigation</span>
+                            </button>
+                        </div>
+                        <div class=\"collapse navbar-collapse\" id=\"navbar-collapse-01\">
+                            <div class=\"float-left\">
+                                <ul class=\"nav navbar-nav navbar-left\">
+                                    <li><a href=\"\">Dashboard</a></li>
+                                    <li><a href=\"\">My Peer Assessments</a></li>
+                                    <li><a href=\"\">Employee Records</a></li>
+                                </ul>
+                            </div>
+                            <div class=\"float-right\">
+                                <div  class=\"color-white block-user-status\" ><span>Welcome Back Linda Hun! > </span><a href=\"\">Logout</a></div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div> <!-- block_menutop -->
+
+        <div class=\"row block_link\">
+            <div class=\"col-xs-12\">
+                <div class=\"font-size-14\">My Peer Assessment > Manage Assessment > #Assessment_Name > Overview</div>
+            </div>
+        </div> <!-- block_link -->
+
+        <div class=\"row block_title\">
+            <div class=\"col-xs-12\">
+                <h4>Peer Assessment: #Assessment_Name</h4>
+            </div>
+        </div> <!-- block_title -->
+
+        <hr/>
+        <div class=\"row block_link_overview\">
+            <div class=\"col-xs-12\">
+                <div class=\"font-size-14\"><a href=\"\">Overview</a> <span>Individual Reports</span></div>
+            </div>
+        </div> <!-- block_link_overview -->
+        <hr/>
+
+        <div class=\"row block_btn_export\">
+            <div class=\"col-xs-12\">
+                <div class=\"col-xs-3\">
+                    <a href=\"\" class=\"btn btn-block btn-lg btn-info\">Export Results By Category</a>
+                </div>
+                <div class=\"col-xs-3\">
+                    <a href=\"\" class=\"btn btn-block btn-lg btn-info\">Export Results By Questions</a>
+                </div>
+            </div>
+        </div> <!-- block_link_overview -->
+
+        <div class=\"row block_link_pds\">
+            <div class=\"col-xs-12\">
+                <div class=\"col-xs-6\">
+                    <hr/>
+                    <div class=\"font-size-14\">
+                        <a href=\"\">Print This Report</a>|<a href=\"\">Download</a>|<a href=\"\">Share</a>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+        </div> <!-- block_link_pds -->
+
+        <div class=\"row block_table1\">
+            <div class=\"col-xs-12\">
+                <div class=\"col-xs-9\">
+                    <div class=\"panel panel-default\">
+                        <table class=\"table table-border-right\">
+                            <tr>
+                                <th>% AVG</th>
+                                <th>AVG</th>
+                                <th>Median</th>
+                                <th>Mode</th>
+                                <th>SD</th>
+                                <th>Completed</th>
+                                <th>Pending</th>
+                            </tr>
+                            <tr>
+                                <td>68%</td>
+                                <td>5.8</td>
+                                <td>5.5</td>
+                                <td>6.7</td>
+                                <td>1.2</td>
+                                <td>82</td>
+                                <td>10</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- block_table1 -->
+
+        <div class=\"row block_table2\">
+            <div class=\"col-xs-12\">
+                <div class=\"block_table2_sub1 table-border-right\">
+                    <div class=\"col-xs-4\">
+                        <h4>Rating Scale</h4>
+                        <div class=\"panel panel-default\">
+                            <table class=\"table\">
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lorem ipsum dolor sit.</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Lorem ipsum dolor.</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Lorem ipsum dolor sit.</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"block_table2_sub2 table-border-right\">
+                    <div class=\"col-xs-8\">
+                        <h4>Overall Result</h4>
+                        <div class=\"panel panel-default\">
+                            <table class=\"table\">
+                                <tr>
+                                    <td></td>
+                                    <td>Category</td>
+                                    <td>Weight</td>
+                                    <td>%AVG</td>
+                                    <td>AVG</td>
+                                    <td>Median</td>
+                                    <td>Mode</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Lorem ipsum dolor sit.</td>
+                                    <td>20%</td>
+                                    <td>14.00%</td>
+                                    <td>5.7</td>
+                                    <td>5.5</td>
+                                    <td>6.7</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Lorem ipsum dolor sit.</td>
+                                    <td>20%</td>
+                                    <td>14.00%</td>
+                                    <td>5.7</td>
+                                    <td>5.5</td>
+                                    <td>6.7</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Lorem ipsum dolor sit.</td>
+                                    <td>20%</td>
+                                    <td>14.00%</td>
+                                    <td>5.7</td>
+                                    <td>5.5</td>
+                                    <td>6.7</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Lorem ipsum dolor sit.</td>
+                                    <td>20%</td>
+                                    <td>14.00%</td>
+                                    <td>5.7</td>
+                                    <td>5.5</td>
+                                    <td>6.7</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Lorem ipsum dolor sit.</td>
+                                    <td>20%</td>
+                                    <td>14.00%</td>
+                                    <td>5.7</td>
+                                    <td>5.5</td>
+                                    <td>6.7</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><strong>Total Peer Assessment</strong></td>
+                                    <td>100%</td>
+                                    <td>68.01%</td>
+                                    <td>5.7</td>
+                                    <td>5.5</td>
+                                    <td>6.7</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- block_table2 -->
+
+        <div class=\"row block_category\">
+            <div class=\"col-xs-12\">
+                <div class=\"col-xs-12\">
+                    <h4>Category Summary</h4>
+                    <div class=\"description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda at blanditiis cum cupiditate delectus dicta dolor doloremque eligendi error fugiat fugit harum itaque iure, minima molestiae nostrum perferendis porro possimus quam rem sequi unde voluptas voluptatem voluptatum? Neque, officia.</div>
+                </div>
+                <div class=\"col-xs-12\">
+                    <div class=\"block_blockquote bg-darkgray\">
+                        <div class=\"float-left col-xs-6 padding-0\">
+                            <h4>Overall Peer RatingL 68% or 5.6 Avergae</h4>
+                            <small>Aggregate rating for all categories assessed</small>
+                        </div>
+                        <div class=\"float-right col-xs-6\">
+                            <table class=\"table\">
+                                <tr>
+                                    <td class=\"col-xs-6\"></td>
+                                    <td>%AVG</td>
+                                    <td>AVG</td>
+                                    <td>Mo</td>
+                                    <td>Md</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>Peer</small>
+                                        <div class=\"progress\">
+                                            <div class=\"progress-bar\" style=\"width: 68.01%;\">5.6</div>
+                                        </div>
+                                    </td>
+                                    <td>68.01%</td>
+                                    <td>5.6</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>Self</small>
+                                        <div class=\"progress\">
+                                            <div class=\"progress-bar progress-bar-success\" style=\"width: 59.01%;\">5.2</div>
+                                        </div>
+                                    </td>
+                                    <td>59.01%</td>
+                                    <td>5.2</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- load Js -->
+    <script src=\"";
+        // line 295
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery-1.8.3.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 296
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery-ui-1.10.3.custom.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 297
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.ui.touch-punch.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 298
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 299
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap-select.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 300
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/bootstrap-switch.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 301
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/flatui-checkbox.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 302
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/flatui-radio.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 303
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.tagsinput.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 304
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.placeholder.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 305
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/jquery.stacktable.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 306
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("flatui/js/video.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 307
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/application.js"), "html", null, true);
+        echo "\"></script>
+
+</body>
+</html>";
+    }
+
+    public function getTemplateName()
+    {
+        return "AcmeStoreBundle:Default:home.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  384 => 307,  380 => 306,  376 => 305,  372 => 304,  368 => 303,  364 => 302,  360 => 301,  356 => 300,  352 => 299,  348 => 298,  344 => 297,  340 => 296,  336 => 295,  60 => 22,  56 => 21,  49 => 17,  44 => 15,  38 => 12,  34 => 11,  29 => 9,  19 => 1,);
+    }
+}

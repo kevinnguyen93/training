@@ -23,7 +23,7 @@ class DefaultController extends Controller
      *  "/",
      *  name="acme_store_index"
      * )
-     * @Template("AcmeStoreBundle:Default:index.html.twig")
+     * @Template("AcmeStoreBundle:Default:home.html.twig")
      */
     public function indexAction(Request $request)
     {

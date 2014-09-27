@@ -1,4 +1,0 @@
-acme_store_homepage:
-    resource: "@AcmeStoreBundle/Controller/DefaultController.php"
-    type:     annotation
-    prefix:   /store

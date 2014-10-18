@@ -1,0 +1,13 @@
+<div class="gallery" ng-show="product.images.length">
+    {{'1388123412323' | date:'MM/dd/yyyy @ h:mma'}}
+    {{'let\'s grow uppercase' | uppercase}}
+    {{'123456789' | limitTo:8}}
+    <div class="img-wrap">
+        <img ng-src="{{product.images[gallery.current]}}"/>
+    </div>
+    <ul class="img-thumbnails clearfix">
+        <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+            <img ng-src="{{image}}"/>
+        </li>
+    </ul>
+</div>
